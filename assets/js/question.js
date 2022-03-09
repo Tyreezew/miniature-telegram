@@ -33,6 +33,11 @@ let questions = [
         title:"A very useful tool used during development and debugging for printing content to the debugger is:",
         choices: ["console.table", "terminal / bash", "for loops", "console.log"],
         answer: "console.log"
-      }
+    },
+    {
+        title: "Question 5: The logical operator that represents 'or' is ____.",
+        choices: ["||", "OR", "&&", "==="],
+        answer: "||"
+    }
 
 ];

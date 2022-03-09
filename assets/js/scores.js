@@ -1,21 +1,24 @@
-    function renderHighScores() {
+let initialsEl = document.getElementById("initials")
+
+
+ function renderHighScores() {
         let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
-        highscores.sort(function(a, b) {
-            return b.score - a.score;
+      highscores.sort(function(a, b) {
+           return b.score - a.score;
         });
 
-        highscores.forEach(function(score) {
-            let listTag = document.createElement("list");
-            listTag.textContent = score.initials + " - " + score.score;
+      highscores.forEach(function(score) {
+           let listTag = document.createElement("list");
+           listTag.textContent = score.initials + " - " + score.score;
 
-            let liEl = document.getElementById("highscores");
-            liEl.appendChild(listTag);
+         let liEl = document.getElementById("highscores");
+           liEl.appendChild(listTag);
         });
     }
 
     function clearHighScores() {
-        window.localStorage.removeItem("highscores");
+       window.localStorage.removeItem("highscores");
         window.location.reload();
     }
 
@@ -38,7 +41,7 @@
     }
 
     function searchForClick(e) {
-        if (e.key === "Enter") {
+       if (e.key === "Enter") {
             saveHighScores();
         }
     }

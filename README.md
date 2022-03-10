@@ -1,5 +1,9 @@
 # JavaScript Code Quiz
 
+# Websites
+* Github: https://github.com/Tyreezew/miniature-telegram
+* Deployed: https://tyreezew.github.io/miniature-telegram/
+
 # Description 
 This is a timed quiz application using HTML, CSS, and Javascript. This application emphasizes the use of Javascript to provide quiz questions and collect user data to determine whether the answers to a question are correct, this then generates a score and appends a final page of results from the user data.
 
@@ -19,10 +23,6 @@ Click start Quiz. After clicking start, the timer will begin. The useri s then p
 * HTML
 * CSS
 * JavaScript
-
-# Websites
-* Github: https://github.com/Tyreezew/miniature-telegram
-* Deployed: 
 
 # Contact
 Feel free to contact me by email @wedding5@msu.edu or on Github @Tyreezew!

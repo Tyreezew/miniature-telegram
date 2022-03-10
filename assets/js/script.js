@@ -6,7 +6,7 @@ let submitButton = document.getElementById("submit");
 let responseEl = document.getElementById("responses")
 
 let currentQuizQuestions = 0;
-let time = questions.length * 20;
+let time = questions.length * 15;
 let timerId;
 
     function beginQuiz() {
@@ -15,7 +15,7 @@ let timerId;
 
         questionsEl.removeAttribute("class");
 
-        timerId = setInterval(clockTick, 1000);
+        timerId = setInterval(clockTick, 1500);
 
         timerItem.textContent = time;
 
@@ -32,7 +32,7 @@ let timerId;
 
         currentQuestion.choices.forEach(function(choice, i){
             let choiceQuery = document.createElement("button");
-            choiceQuery.setAttribute("class", "choice");
+            choiceQuery.setAttribute("class", "choices");
             choiceQuery.setAttribute("value", choice);
 
             choiceQuery.textContent = i + 1 + "." + choice;
@@ -45,7 +45,7 @@ let timerId;
 
     function questionBtn() {
         if(this.value !== questions[currentQuizQuestions].answer) {
-            time -= 20;
+            time -= 15;
 
             if (time < 0) {
                 time = 0;
@@ -59,10 +59,10 @@ let timerId;
         responseEl.textContent = "Correct!";
     }
 
-    responseEl.setAttribute("class", "feedback");
+    responseEl.setAttribute("class", "responses");
     setTimeout(function() {
-        responseEl.setAttribute("class", "response hide");
-    }, 1500);
+        responseEl.setAttribute("class", "responses-hidden");
+    }, 1000);
 
     currentQuizQuestions++;
 

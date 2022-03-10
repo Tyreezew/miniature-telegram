@@ -1,7 +1,7 @@
 let initialsEl = document.getElementById("initials")
 
 
- function renderHighScores() {
+ function renderHighscores() {
         let highscores = JSON.parse(window.localStorage.getItem("highscores")) || [];
 
       highscores.sort(function(a, b) {
@@ -9,7 +9,7 @@ let initialsEl = document.getElementById("initials")
         });
 
       highscores.forEach(function(score) {
-           let listTag = document.createElement("list");
+           let listTag = document.createElement("li");
            listTag.textContent = score.initials + " - " + score.score;
 
          let liEl = document.getElementById("highscores");
@@ -17,13 +17,13 @@ let initialsEl = document.getElementById("initials")
         });
     }
 
-    function clearHighScores() {
+    function clearHighscores() {
        window.localStorage.removeItem("highscores");
         window.location.reload();
     }
 
 
-    function saveHighScores() {
+    function saveHighscores() {
         let initials = initialsEl.value.trim();
 
         if (initials !== "") {
@@ -48,6 +48,6 @@ let initialsEl = document.getElementById("initials")
 
     initialsEl.onkeyup = searchForClick;
 
-    document.getElementById("clear").onClick = clearHighScores;
+    document.getElementById("clear").onclick = clearHighscores;
 
-    renderHighScores();
+    renderHighscores();

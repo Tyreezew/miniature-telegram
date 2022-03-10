@@ -21,8 +21,8 @@ Click start Quiz. After clicking start, the timer will begin. The useri s then p
 * JavaScript
 
 # Websites
-* Github: 
-* Deployed:
+* Github: https://github.com/Tyreezew/miniature-telegram
+* Deployed: 
 
 # Contact
 Feel free to contact me by email @wedding5@msu.edu or on Github @Tyreezew!
